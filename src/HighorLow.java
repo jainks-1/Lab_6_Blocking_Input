@@ -6,6 +6,8 @@ Use the do while loop again to bulletproof the guess which must be an int from 1
  */
 
 import java.util.Scanner;
+import java.util.Random;
+
 
 public class HighorLow {
     public static void main(String[] args) {
@@ -14,6 +16,8 @@ public class HighorLow {
         Scanner in = new Scanner(System.in);
 
         int userNum = 0;
+        int randNum = 0;
+        Random random1 = new Random();
 
         boolean firstValid;
 
@@ -44,9 +48,26 @@ public class HighorLow {
         }
         while (!firstValid);
 
+        // Generate a random number between 1 and 10
+        randNum = random1.nextInt(10) + 1;
+        System.out.println("\nGenerating random integer...");
 
-        System.out.println("Cont program");
-
+        // code outputs
+        if (randNum == userNum){
+            System.out.println("\nYour guessed integer was: " + userNum);
+            System.out.println("Randomly generated integer was: " + randNum);
+            System.out.println("You're right on the money!");
+        }
+        else if (randNum > userNum) {
+            System.out.println("\nYour guessed integer was: " + userNum);
+            System.out.println("Randomly generated integer was: " + randNum);
+            System.out.println("Your number was low of the randomly generated number.");
+        }
+        else {
+            System.out.println("\nYour guessed integer was: " + userNum);
+            System.out.println("Randomly generated integer was: " + randNum);
+            System.out.println("Your number was high of the randomly generated number.");
+        }
 
         System.exit(0);
     }
