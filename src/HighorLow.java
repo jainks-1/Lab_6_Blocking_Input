@@ -17,7 +17,7 @@ public class HighorLow {
 
         int userNum = 0;
         int randNum = 0;
-        Random random1 = new Random();
+        Random generator = new Random();
 
         boolean firstValid;
 
@@ -49,7 +49,7 @@ public class HighorLow {
         while (!firstValid);
 
         // Generate a random number between 1 and 10
-        randNum = random1.nextInt(10) + 1;
+        randNum = generator.nextInt(10) + 1;
         System.out.println("\nGenerating random integer...");
 
         // code outputs
