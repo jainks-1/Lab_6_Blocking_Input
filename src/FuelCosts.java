@@ -91,7 +91,7 @@ public class FuelCosts {
 
         // Print outputs
         System.out.println("\nThe cost to drive 100 miles is: [$" + formattedCostOf100Miles + "]");
-        System.out.println("The max distance the car will drive is: [" + formattedMilesOnFull + "] miles.");
+        System.out.println("The car can drive: [" + formattedMilesOnFull + "] miles on a full tank.");
 
         System.exit(0);
     }
